@@ -1,293 +1,346 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Bike Wellesley</title>
+        <title>Wellesleypedia</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="themes/d.min.css" />
-            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css" />
+             <link rel="stylesheet" href="themes/d.min.css" />
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
             <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
             <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
 
-
-
-
-
+            <!-- JAVASCRIPT to clear search text when the field is clicked -->
+<script type="text/javascript">
+window.onload = function(){ 
+    //Get submit button
+    var submitbutton = document.getElementById("tfq");
+    //Add listener to submit button
+    if(submitbutton.addEventListener){
+        submitbutton.addEventListener("click", function() {
+            if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+                submitbutton.value = '';
+            }
+        });
+    }
+}
+</script>
+<!-- CSS styles for standard search box with placeholder text-->
+<style type="text/css">
+    #tfheader{
+        background-color:#c3dfef;
+    }
+    #tfnewsearch{
+        float:right;
+        padding:20px;
+    }
+    .tftextinput2{
+        margin: 0;
+        padding: 5px 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14px;
+        color:#666;
+        border:1px solid #0076a3; border-right:0px;
+        border-top-left-radius: 5px 5px;
+        border-bottom-left-radius: 5px 5px;
+    }
+    .tfbutton2 {
+        margin: 0;
+        padding: 5px 7px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size:14px;
+        font-weight:bold;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        color: #ffffff;
+        border: solid 1px #0076a3; border-right:0px;
+        background: #0095cd;
+        background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+        background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+        border-top-right-radius: 5px 5px;
+        border-bottom-right-radius: 5px 5px;
+    }
+    .tfbutton2:hover {
+        text-decoration: none;
+        background: #007ead;
+        background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+        background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+    }
+    /* Fixes submit button height problem in Firefox */
+    .tfbutton2::-moz-focus-inner {
+      border: 0;
+    }
+    .tfclear{
+        clear:both;
+    }
+</style>
+           
     </head>
-
+    
     <body>
-        <!-- Start of first page -->
-        <div data-role="page" id="welcome" data-theme="d">
+    
+        <!-- Home page, loaded automatically, accessible via home button -->
+        <div data-role="page" id="home" data-theme="d">
             <div data-role="header">
-                <input type="search" name="search" id="search" value="" data-mini="true"/>
+                <h1>Wellesleypedia</h1>
+                <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+                    </form>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a> 
             </div>
+
             <div role="content" class="ui-content">
-           <p>
+            <h2>Home</h2>
 
-
-             <div role="main" class="ui-content">
-                 <ul data-role="listview" data-theme="c">
-                 <!-- list divider -->
-
-                 <!-- list items -->
- 				<li>
-                 	<img src="clapp_lib.jpg">
-                     <p> <b> Wellesley College Clapp Library </b></p>
-                     </li>
-
-                     <li>
-                 	<img src="boston_pub.jpg">
-                 	<p> <b> Boston Public Library </b> </p>
-                     </li>
-
-
-                     <li>
-                 	<img src="thinkingcup.jpg" >
-                 	<p> <b> The Thinking Cup Cafe </b> </p>
-                     </li>
-
-                     <li>
-                 	<img src="tatte.jpg" >
-                 	<p> <b> Tatte Bakery </b> </p>
-                     </li>
-
-                     <li>
-                 	<img src="tatte.jpg" >
-                 	<p> <b> Tatte Bakery </b> </p>
-                     </li>
-
-                     <li>
-                 	<img src="tatte.jpg" >
-                 	<p> <b> Tatte Bakery </b> </p>
-                     </li>
-
-                     <li>
-                 	<img src="tatte.jpg" >
-                 	<p> <b> Tatte Bakery </b> </p>
-                     </li>
-                 </ul>
-
-             </div><!-- /content -->
-
-
-
-
-                <div data-role="popup" id="popupPhoto" data-overlay-theme="a" data-theme="d" data-corners="false">
-					<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
-					<img class="popphoto" src="Wellesley_bikes.jpg" alt="Students riding">
-				</div>
-
-                <div data-role="popup" id="popupInfo" style="max-width:150px;">
-          			<p>Here is a <strong>tiny popup</strong> being used like a tooltip. The text will wrap to multiple lines as needed.</p>
-				</div>
-
-
-
-            </div>
-            <div data-role="footer">
-            <div data-role="navbar">
-            	<ul>
-            		<li> <a href="#bicycles" data-icon="user">Account</a>
-            		<li> <a href="#map" data-icon="home">Home</a>
-            		<li> <a href="" data-icon="grid">Archive</a>
-            	</ul>
-            </div>
-                <h4>CS220 Human Computer Interaction 2017</h4>
-            </div>
-        </div>
-        <!-- Start of second page -->
-        <div data-role="page" id="stores" data-theme="d">
-
-            <div data-role="header" data-position="inline">
-                <a data-icon="back" data-rel="back" back-btn="true">Back</a>
-                <h1>Bar</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <p>I'm the second in the source order so I'm hidden when the page loads. I'm just shown if a link that references my id is beeing clicked.</p>
-                <p><a href="#welcome" data-role="button" data-icon="home">Back to welcome page</a></p>
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-
-          <!-- Start of third page -->
-        <div data-role="page" id="map" data-theme="d">
-
-            <div data-role="header" data-position="inline">
-                <a data-icon="back" data-rel="back" back-btn="true">Back</a>
-                <h1>Map</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-            	<p>Current location
-                <div id="basic_map" style="width:320px;height:240px;"></div>
-            </div><!-- /content -->
-
-            <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-
-        <!-- Start of fourth page -->
-        <div data-role="page" id="bicycles" data-theme="d">
-
-            <div data-role="header" data-position="inline">
-                <a data-icon="back" data-rel="back" back-btn="true">Back</a>
-                <h1>Bicycles</h1>
-            </div><!-- /header -->
-
-            <div role="main" class="ui-content">
-                <ul data-role="listview" data-theme="c">
-                <!-- list divider -->
-                <li data-role="list-divider">Road</li>
-
+            <ul data-role="listview" data-theme="c">
+                
                 <!-- list items -->
-				<li><a href="#bike1" >
-                	<img src="bicycle5.jpg">
-                    <h3 class="ui-li-heading">Status</h3>
-                    <p class="ui-li-desc">Status description</p>
-                    <span class="ui-li-aside">$121</span>
+                <li><a href="#question1" >
+                    <h3 class="ui-li-heading">What exactly constitutes colonialism?<br></br></h3>
+                    <p class="ui-li-desc">I don't understand...</p>
+                    <span class="ui-li-count">More</span>
                     </a>
                     </li>
-                    <li><a href="#bike1" >
-                	<img src="bicycle5.jpg">
-                    <h3 class="ui-li-heading">Status</h3>
-                    <p class="ui-li-desc">Status description</p>
-                     <span class="ui-li-aside">$391</span>
+                    <li><a href="#question2" >
+                    <h3 class="ui-li-heading">What is elitism?<br></br></h3>
+                    <p class="ui-li-desc">I heard about this term for the first time in...</p>
+                     <span class="ui-li-count">More</span>
                     </a>
                     </li>
-                    <!-- list divider -->
-                    <li data-role="list-divider">Sport</li>
-                    <!-- list items -->
-                    <li><a href="#bike1" class="ui-link-inherit">
-                	<img src="bicycle5.jpg" >
-                    <h3 class="ui-li-heading">Status</h3>
-                    <p class="ui-li-desc">Status description</p>
-                     <span class="ui-li-count">12</span>
+                    <li><a href="#question3" class="ui-link-inherit">
+                    <h3 class="ui-li-heading">Why is colorism so rampant?<br></br></h3>
+                    <p class="ui-li-desc">Sometimes it frustrates me how...</p>
+                     <span class="ui-li-count">More</span>
                     </a>
                     </li>
-                    <li><a href="#bike1" class="ui-link-inherit">
-                	<img src="bicycle5.jpg" >
-                    <h3 class="ui-li-heading">Status</h3>
-                    <p class="ui-li-desc">Status description</p>
-                     <span class="ui-li-count">1</span>
+                    <li><a href="#question4" class="ui-link-inherit">
+                    <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?<br></br></h3>
+                    <p class="ui-li-desc"></p>
+                     <span class="ui-li-count">More</span>
                     </a>
                     </li>
                 </ul>
 
-            </div><!-- /content -->
+             
+            </div>
 
             <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+            </div>
+            </div>
 
-          <!-- Start of fifth page -->
-        <div data-role="page" id="collapsible" data-theme="d">
-
+        </div>
+        
+        <!-- Account page, accessible via navbar -->
+        <div data-role="page" id="account" data-theme="d">
+        
             <div data-role="header" data-position="inline">
-                <a data-icon="back" data-rel="back" back-btn="true">Back</a>
-                <h1>Collapsible</h1>
+                <h1>Wellesleypedia</h1>
+                <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+                    </form>
+                    <div class="tfclear"></div>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a>
+            </div>
+            <div data-role="content" class="ui-content">
+                <h2>Account</h2>
+                <img class=avatar src="avatar.png" style="width:30%; display: flex; margin:auto;">
+                <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
+            <li><a class=accountlist href="#settings">Settings</a></li>    
+            <li><a class=accountlist href="#myquestions">My Questions</a></li>
+            <li><a class=accountlist href="#myanswers">My Answers</a></li>
+            <li><a class=accountlist href="#mybookmarks">My Bookmarks</a></li>
+             </ul>  
+                
+            </div>
+
+
+            <div data-role="footer">
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+         <!-- Account page, accessible via navbar -->
+        <div data-role="page" id="settings" data-theme="d">
+        
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                <a class=button data-icon="check" href="#save">Save</a>
+            </div>
+            <div data-role="content" class="ui-content">
+                <h2>Settings</h2>
+                <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
+                <img class=avatar src="avatar.png" style="width:15%;"">
+            <li><a class=accountlist>Username: wwellesley</a></li>    
+            <li><a class=accountlist>Class Year: 2019</a></li>
+            <li><a class=accountlist>Race: N/A</a></li>
+            <li><a class=accountlist>Sexuality: N/A</a></li>
+            <li><a class=accountlist>Pronouns: she/her/hers</a></li>
+            <li><a class=accountlist><h2>Tags You Like:</h2>
+                <ul>
+                <li>#BLM</li>
+                <li>#colorism</li>
+                </ul>
+                </a></li>
+             </ul>  
+
+            <div data-role="footer">
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+         <!-- Start of Archive page -->
+        <div data-role="page" id="archive" data-theme="d">
+            
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+                    </form>
+                    <div class="tfclear"></div>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a>
             </div><!-- /header -->
+            
+            <div role="main" class="ui-content">
+                <h2>Archive</h2>
+                <ul class="archivelist" data-role="listview" data-inset="true" data-autodividers="true">
+                    <li class=topic>AAVE</li>
+                    <li class=topic>Asian American</li>
+                   <li class=topic>Black Lives Matter</li>
+                   <li class=topic>Classism</li>
+                   <li class=topic>Colonialism</li>
+                   <li class=topic>Colorism</li>
+                   <li class=topic>Elitism</li>
+                   <li class=topic>Ethnicity</li>
+                   <li class=topic>Feminism</li>
+                   <li class=topic>Gender Identity</li>
+                   <li class=topic>Hate Crimes</li>
+                   <li class=topic>Immigration</li>
+                   <li class=topic>LGBTQ</li>
+                   <li class=topic>Native American</li>
+                   <li class=topic>Policing</li>
+                   <li class=topic>Queer</li>
+                   <li class=topic>Race</li>
+                   <li class=topic>Reproductive Rights</li>
+                   <li class=topic>White Feminism</li>
+                </ul>
+                
+ 
+            </div><!-- /content -->
+          <div data-role="footer">
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>      
+            
+            <div data-role="footer">
+        <div data-role="page" id="fooddrink" data-theme="d">
+        
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+        <!-- search page -->
+        
+        <div data-role="page" id="search" data-theme="d">
+        
+            <div data-role="header">
+                <h1>Wellesleypedia</h1>
+                 <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+                    </form>
+                    <div class="tfclear"></div>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a>
+            </div>
 
             <div role="main" class="ui-content">
-            	<p>Collapsible content
-
-                <div data-role="collapsible-set" data-theme="c" data-content-theme="d">
-    				<div data-role="collapsible">
-        				<h3>Section 1</h3>
-        				<p>I'm the collapsible content for section 1</p>
-    				</div>
-    				<div data-role="collapsible">
-        				<h3>Section 2</h3>
-        				<p>I'm the collapsible content for section 2</p>
-    				</div>
-    				<div data-role="collapsible">
-        				<h3>Section 3</h3>
-        				<p>I'm the collapsible content for section 3</p>
-    				</div>
-				</div> <!-- collapsible-set -->
+                <h2>Results</h2>
+ 
             </div><!-- /content -->
 
             <div data-role="footer">
-                <h4>Page Footer</h4>
-            </div><!-- /footer -->
-        </div><!-- /page -->
-
-         <!--Google Maps API-->
-		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
-        <!-- the following script handles Google Maps -->
-		<script>
-                //global variables for storing location information
-            var updateLocation;
-            var lat;
-            var lon;
-
-        /*This function uses the geolocation.getCurrentPosition method.
-        The geolocation.getCurrentPosition takes 3 parameters: a success function, an error function, and options in the form of JSON syntax.
-        This function is invoked when the user click on the get_coords button.
-        */
-
-        function getGPS()
-        {
-            //The enableAccuracy option provides you with the highest accuracy but consumes a lot of battery life.
-            navigator.geolocation.getCurrentPosition(successGPS,errorGPS,{enableHighAccuracy : true});
-        }
-
-        /* This function is invoked by the geolocation.getCurrentPosition method used in getGPS()
-        */
-        /*This function is used to retrieve GPS coordinates and pass them to a function, which in turn initializes a Google Map centered on the current location of the device.*/
-        function getGPSLatLng()
-
-        {
-            navigator.geolocation.getCurrentPosition(successGPSLatLng,errorGPS,{enableHighAccuracy : true});
-        }
-
-        /* This function is invoked when there is an error in reading GPS info*/
-        function errorGPS()
-        {
-            alert("GPS Error");
-        }
-
-        /*This function initializes a Google Map object centered on the current location of the device */
-
-        function successGPSLatLng(position)
-        {
-            //store current latitude and longitude information
-            lat=position.coords.latitude;
-            lon=position.coords.longitude;
-
-            //create a new googl.maps.LatLng object
-            var latlng=new google.maps.LatLng(lat,lon);
-
-            //set Google Map options
-            var myOptions={
-                zoom: 15,
-                center: latlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            }
-
-            //create a new map, pass its <div> contsainer as parameter
-            var map= new google.maps.Map(document.getElementById("basic_map"), myOptions);
-
-            //place a marker with current latitude and longitude on the map
-            var marker= new google.maps.Marker({position: latlng, map: map});
-
-        }
-        </script>
-
-        <!-- The following <script> handles jQuery Mobile events -->
-      	<script>
-
-
-		<!-- Event listener for the pageinit (i.e.uloaded) event of #map -->
-			$("#map").bind("pageinit",function (event)
-			{
-				getGPSLatLng();
-			});
-			</script>
+            
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        
+        </div>
     </body>
 </html>
