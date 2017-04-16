@@ -295,8 +295,8 @@ window.onload = function(){
             <div role="main" class="ui-content">
                 <h2>Archive</h2>
                 <ul class="archivelist" data-role="listview" data-inset="true" data-autodividers="true">
-                    <li class=topic>AAVE</li>
-                    <li class=topic>Asian American</li>
+                    <li class=topic><a class=accountlist href="#AAVE">AAVE</a></li>
+                    <li class=topic><a class=accountlist href="#asian">Asian American</a></li>
                    <li class=topic>Black Lives Matter</li>
                    <li class=topic>Classism</li>
                    <li class=topic>Colonialism</li>
@@ -351,6 +351,128 @@ window.onload = function(){
             </div>
 
         </div>
+        </div>
+
+         <!-- Hardcoded AAVE archive page -->
+        <div data-role="page" id="AAVE" data-theme="d">
+        
+           <div data-role="header">
+                <h1>Wellesleypedia</h1>
+                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                <!-- <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+
+                    </form>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a>  -->
+            </div>
+             
+
+            <div role="content" class="ui-content">
+            <h2>AAVE</h2>
+
+            <ul data-role="listview" data-theme="c">
+                
+                <!-- list items -->
+                <li><a href="#question1" >
+                    <h3 class="ui-li-heading">Why can't non-black folx use AAVE?<br></br></h3>
+                    <p class="ui-li-desc">If you grew up in an area where...</p>
+                    <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                    <li><a href="#question2" >
+                    <h3 class="ui-li-heading">What counts as AAVE?<br></br></h3>
+                    <p class="ui-li-desc">Sometimes I can't tell if certain...</p>
+                     <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                    <li><a href="#question3" class="ui-link-inherit">
+                    <h3 class="ui-li-heading">Is there a relationship between AAVE usage and colorism?<br></br></h3>
+                    <p class="ui-li-desc">Just curious...</p>
+                     <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                    <li><a href="#question4" class="ui-link-inherit">
+                    <h3 class="ui-li-heading">Does anyone have good sources for AAVE vernacular and history?<br></br></h3>
+                    <p class="ui-li-desc"></p>
+                     <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                </ul>
+
+             
+            </div>
+
+            <div data-role="footer">
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+
+        </div>
+
+        <!-- Hardcoded archive page -->
+        <div data-role="page" id="asian" data-theme="d">
+        
+           <div data-role="header">
+                <h1>Wellesleypedia</h1>
+                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                <!-- <a>
+                    <span class="icon"><i class="fa fa-search"></i></span>
+                    <form id="tfnewsearch" method="get">
+                    <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+
+                    </form>
+                    </a>
+                <a class=button data-icon="plus" href="#new">New Question</a>  -->
+            </div>
+             
+
+            <div role="content" class="ui-content">
+            <h2>Asian American</h2>
+
+            <ul data-role="listview" data-theme="c">
+                
+                <!-- list items -->
+                <li><a href="#question1" >
+                    <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?<br></br></h3>
+                    <p class="ui-li-desc"></p>
+                    <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                    <li><a href="#question2" >
+                    <h3 class="ui-li-heading">Who counts as an Asian American?<br></br></h3>
+                    <p class="ui-li-desc">Just to clarify...</p>
+                     <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
+                </ul>
+
+             
+            </div>
+
+            <div data-role="footer">
+                <div id="navigation">
+                
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+
         </div>
 
         <!-- search page -->
