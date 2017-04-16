@@ -11,7 +11,7 @@
 
             <!-- JAVASCRIPT to clear search text when the field is clicked -->
 <script type="text/javascript">
-window.onload = function(){ 
+window.onload = function(){
     //Get submit button
     var submitbutton = document.getElementById("tfq");
     //Add listener to submit button
@@ -75,20 +75,47 @@ window.onload = function(){
         clear:both;
     }
 </style>
-           
+
     </head>
-    
+
     <body>
-    
+
         <!-- Home page, loaded automatically, accessible via home button -->
         <div data-role="page" id="home" data-theme="d">
          <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+                <!--<a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>-->
+                <div class="ui-block-b" style="width: 10%;">
+                        <a href="#popup" data-role="button" data-icon="plus" data-iconpos="notext" data-rel= "popup">Submit</a>
+                </div>
+
+                    <div data-role ="popup" id="popupBasic">
+                      <p> Test </p>
+                    </div>
+
+                    <div data-role="popup" id="popup" data-overlay-theme="a" data-theme="d" data-corners="false">
+                        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                <div style = "background-color:white; width:70%; position: fixed;top:50%;left:50%; transform: translate(-50%, -50%); padding-left:30px; padding-right:30px;">
+                          <h2> Ask a Question </h2>
+                          <form>
+                          <label for ="input"><p> Question </p></label>
+                          <input type="text"></input>
+
+                          <label for="textarea"><p>Elaborate with details </p></label>
+                          <textarea cols="8" rows="60" name="textarea" id="details">
+                          </textarea>
+
+                        </form>
+                        <br>
+                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        <!--<input type="submit" value="Submit">-->
+              </div>
             </div><!-- /header -->
-            
+        </div>
+
             <div class="ui-field-contain">
-                <input type="search" name="search" id="search" data-mini="true"     
+                <input type="search" name="search" id="search" data-mini="true"
                 placeholder="Search for content..." />
             </div>
 
@@ -96,7 +123,7 @@ window.onload = function(){
             <h2>Home</h2>
 
             <ul data-role="listview" data-theme="c">
-                
+
                 <!-- list items -->
                 <li><a href="#question1" >
                     <h3 class="ui-li-heading">What exactly constitutes colonialism?<br></br></h3>
@@ -124,12 +151,12 @@ window.onload = function(){
                     </li>
                 </ul>
 
-             
+
             </div>
 
             <div data-role="footer" data-id="foo1" data-position="fixed">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -141,17 +168,17 @@ window.onload = function(){
             </div>
 
         </div>
-        
+
         <!-- Account page, accessible via navbar -->
         <div data-role="page" id="account" data-theme="d">
-        
+
              <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
                 <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
             </div><!-- /header -->
-            
+
             <div class="ui-field-contain">
-                <input type="search" name="search" id="search" data-mini="true"     
+                <input type="search" name="search" id="search" data-mini="true"
                 placeholder="Search for content..." />
             </div>
 
@@ -160,18 +187,18 @@ window.onload = function(){
                 <h2>Account</h2>
                 <img class=avatar src="avatar.png" style="width:30%; display: flex; margin:auto;">
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
-            <li><a class=accountlist href="#settings">Settings</a></li>    
+            <li><a class=accountlist href="#settings">Settings</a></li>
             <li><a class=accountlist href="#myquestions">My Questions</a></li>
             <li><a class=accountlist href="#myanswers">My Answers</a></li>
             <li><a class=accountlist href="#mybookmarks">My Bookmarks</a></li>
-             </ul>  
-                
+             </ul>
+
             </div>
 
 
             <div data-role="footer" data-id="foo1" data-position="fixed">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -179,7 +206,7 @@ window.onload = function(){
                     <li> <a href="#archive" data-icon="grid">Archive</a>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -188,17 +215,17 @@ window.onload = function(){
 
          <!-- Account page, accessible via navbar -->
         <div data-role="page" id="settings" data-theme="d">
-        
+
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
                 <a class=button data-icon="check" href="#save">Save</a>
             </div>
             <div data-role="content" class="ui-content">
                 <h2>Settings</h2>
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
                 <img class=avatar src="avatar.png" style="width:15%;"">
-            <li><a class=accountlist>Username: wwellesley</a></li>    
+            <li><a class=accountlist>Username: wwellesley</a></li>
             <li><a class=accountlist>Class Year: 2019</a></li>
             <li><a class=accountlist>Race: N/A</a></li>
             <li><a class=accountlist>Sexuality: N/A</a></li>
@@ -209,11 +236,11 @@ window.onload = function(){
                 <li>#colorism</li>
                 </ul>
                 </a></li>
-             </ul>  
+             </ul>
 
             <div data-role="footer">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -221,27 +248,27 @@ window.onload = function(){
                     <li> <a href="#archive" data-icon="grid">Archive</a>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
 
         </div>
         </div>
 
-    
+
 
 
 
          <!-- Start of Archive page -->
         <div data-role="page" id="archive" data-theme="d">
-            
+
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
                 <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
             </div><!-- /header -->
-            
+
             <div class="ui-field-contain">
-                <input type="search" name="search" id="search" data-mini="true"     
+                <input type="search" name="search" id="search" data-mini="true"
                 placeholder="Search for content..." />
             </div>
 
@@ -268,12 +295,12 @@ window.onload = function(){
                    <li class=topic>Reproductive Rights</li>
                    <li class=topic>White Feminism</li>
                 </ul>
-                
- 
+
+
             </div><!-- /content -->
           <div data-role="footer" data-id="foo1" data-position="fixed">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -281,17 +308,17 @@ window.onload = function(){
                     <li> <a href="#archive" data-icon="grid">Archive</a>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
 
-        </div>      
-            
+        </div>
+
             <div data-role="footer" data-id="foo1" data-position="fixed">
         <div data-role="page" id="fooddrink" data-theme="d">
-        
+
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -299,7 +326,7 @@ window.onload = function(){
                     <li> <a href="#archive" data-icon="grid">Archive</a>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -308,10 +335,10 @@ window.onload = function(){
 
          <!-- Hardcoded AAVE archive page -->
         <div data-role="page" id="AAVE" data-theme="d">
-        
+
            <div data-role="header">
                 <h1>Wellesleypedia</h1>
-                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
                 <!-- <a>
                     <span class="icon"><i class="fa fa-search"></i></span>
                     <form id="tfnewsearch" method="get">
@@ -321,13 +348,13 @@ window.onload = function(){
                     </a>
                 <a class=button data-icon="plus" href="#new">New Question</a>  -->
             </div>
-             
+
 
             <div role="content" class="ui-content">
             <h2>AAVE</h2>
 
             <ul data-role="listview" data-theme="c">
-                
+
                 <!-- list items -->
                 <li><a href="#question1" >
                     <h3 class="ui-li-heading">Why can't non-black folx use AAVE?<br></br></h3>
@@ -355,12 +382,12 @@ window.onload = function(){
                     </li>
                 </ul>
 
-             
+
             </div>
 
             <div data-role="footer">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -375,10 +402,10 @@ window.onload = function(){
 
         <!-- Hardcoded archive page -->
         <div data-role="page" id="asian" data-theme="d">
-        
+
            <div data-role="header">
                 <h1>Wellesleypedia</h1>
-                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a> 
+                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
                 <!-- <a>
                     <span class="icon"><i class="fa fa-search"></i></span>
                     <form id="tfnewsearch" method="get">
@@ -388,13 +415,13 @@ window.onload = function(){
                     </a>
                 <a class=button data-icon="plus" href="#new">New Question</a>  -->
             </div>
-             
+
 
             <div role="content" class="ui-content">
             <h2>Asian American</h2>
 
             <ul data-role="listview" data-theme="c">
-                
+
                 <!-- list items -->
                 <li><a href="#question1" >
                     <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?<br></br></h3>
@@ -410,12 +437,12 @@ window.onload = function(){
                     </li>
                 </ul>
 
-             
+
             </div>
 
             <div data-role="footer">
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -429,9 +456,9 @@ window.onload = function(){
         </div>
 
         <!-- search page -->
-        
+
         <div data-role="page" id="search" data-theme="d">
-        
+
             <div data-role="header">
                 <h1>Wellesleypedia</h1>
                  <a>
@@ -446,13 +473,13 @@ window.onload = function(){
 
             <div role="main" class="ui-content">
                 <h2>Results</h2>
- 
+
             </div><!-- /content -->
 
             <div data-role="footer" data-id="foo1" data-position="fixed">
-            
+
                 <div id="navigation">
-                
+
                     <div data-role="navbar">
                         <ul>
                             <li> <a href="#account" data-icon="user">Account</a>
@@ -460,10 +487,10 @@ window.onload = function(){
                     <li> <a href="#archive" data-icon="grid">Archive</a>
                         </ul>
                     </div>
-                    
+
                 </div>
             </div>
-        
+
         </div>
     </body>
 </html>
