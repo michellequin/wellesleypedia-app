@@ -88,20 +88,13 @@ window.onload = function(){
  -->
                  <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+                <a href="#popupBasic" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right" data-rel= "popup">Submit</a>
             </div><!-- /header -->
             
-            <!-- 
-                <div class="ui-block-b" style="width: 10%;">
-                        <a href="#popup" data-role="button" data-icon="plus" data-iconpos="notext" data-rel= "popup">Submit</a>
-                </div> -->
 
-                    <div data-role ="popup" id="popupBasic">
-                      <p> Test </p>
-                    </div>
 
             
-            <div data-role="popup" id="popup" data-overlay-theme="a" data-theme="d" data-corners="false">
+            <div data-role="popup" id="popupBasic" data-overlay-theme="a" data-theme="d" data-corners="false">
                         <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 
                 <div style = "background-color:white; width:70%; position: fixed;top:50%;left:50%; transform: translate(-50%, -50%); padding-left:30px; padding-right:30px;">
@@ -119,7 +112,8 @@ window.onload = function(){
                         <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
                         <!--<input type="submit" value="Submit">-->
               </div>
-            </div><!-- /header -->
+            </div>
+
         </div>
 
             <div class="ui-field-contain">
@@ -182,8 +176,28 @@ window.onload = function(){
 
              <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+                <a href="#popupBasic1" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right" data-rel= "popup">Submit</a>
             </div><!-- /header -->
+
+            <div data-role="popup" id="popupBasic1" data-overlay-theme="a" data-theme="d" data-corners="false">
+                        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                <div style = "background-color:white; width:70%; position: fixed;top:50%;left:50%; transform: translate(-50%, -50%); padding-left:30px; padding-right:30px;">
+                          <h2> Ask a Question </h2>
+                          <form>
+                          <label for ="input"><p> Question </p></label>
+                          <input type="text"></input>
+
+                          <label for="textarea"><p>Elaborate with details </p></label>
+                          <textarea cols="8" rows="60" name="textarea" id="details">
+                          </textarea>
+
+                        </form>
+                        <br>
+                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        <!--<input type="submit" value="Submit">-->
+              </div>
+            </div>
 
             <div class="ui-field-contain">
                 <input type="search" name="search" id="search" data-mini="true"
@@ -275,8 +289,28 @@ window.onload = function(){
 
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+                <a href="#popupBasic2" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right" data-rel="popup">Submit</a>
             </div><!-- /header -->
+
+            <div data-role="popup" id="popupBasic2" data-overlay-theme="a" data-theme="d" data-corners="false">
+                        <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+
+                <div style = "background-color:white; width:70%; position: fixed;top:50%;left:50%; transform: translate(-50%, -50%); padding-left:30px; padding-right:30px;">
+                          <h2> Ask a Question </h2>
+                          <form>
+                          <label for ="input"><p> Question </p></label>
+                          <input type="text"></input>
+
+                          <label for="textarea"><p>Elaborate with details </p></label>
+                          <textarea cols="8" rows="60" name="textarea" id="details">
+                          </textarea>
+
+                        </form>
+                        <br>
+                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        <!--<input type="submit" value="Submit">-->
+              </div>
+            </div>
 
             <div class="ui-field-contain">
                 <input type="search" name="search" id="search" data-mini="true"
