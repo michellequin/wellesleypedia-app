@@ -83,17 +83,26 @@ window.onload = function(){
         <!-- Home page, loaded automatically, accessible via home button -->
         <div data-role="page" id="home" data-theme="d">
          <div data-role="header" data-position="inline">
+
+
+<!--                 <h1>Wellesleypedia</h1>
+ -->
+                 <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
-                <!--<a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>-->
+                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+            </div><!-- /header -->
+            
+            <!-- 
                 <div class="ui-block-b" style="width: 10%;">
                         <a href="#popup" data-role="button" data-icon="plus" data-iconpos="notext" data-rel= "popup">Submit</a>
-                </div>
+                </div> -->
 
                     <div data-role ="popup" id="popupBasic">
                       <p> Test </p>
                     </div>
 
-                    <div data-role="popup" id="popup" data-overlay-theme="a" data-theme="d" data-corners="false">
+            
+            <div data-role="popup" id="popup" data-overlay-theme="a" data-theme="d" data-corners="false">
                         <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 
                 <div style = "background-color:white; width:70%; position: fixed;top:50%;left:50%; transform: translate(-50%, -50%); padding-left:30px; padding-right:30px;">
@@ -118,6 +127,8 @@ window.onload = function(){
                 <input type="search" name="search" id="search" data-mini="true"
                 placeholder="Search for content..." />
             </div>
+
+
 
             <div role="content" class="ui-content">
             <h2>Home</h2>
@@ -215,12 +226,24 @@ window.onload = function(){
 
          <!-- Account page, accessible via navbar -->
         <div data-role="page" id="settings" data-theme="d">
-
+<!-- 
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
                    <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
                 <a class=button data-icon="check" href="#save">Save</a>
             </div>
+
+ -->
+             <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right">Submit</a>
+            </div><!-- /header -->
+            
+            <div class="ui-field-contain">
+                <input type="search" name="search" id="search" data-mini="true"     
+                placeholder="Search for content..." />
+            </div>
+
             <div data-role="content" class="ui-content">
                 <h2>Settings</h2>
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
