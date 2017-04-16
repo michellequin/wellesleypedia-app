@@ -84,13 +84,25 @@ window.onload = function(){
         <div data-role="page" id="home" data-theme="d">
             <div data-role="header">
                 <h1>Wellesleypedia</h1>
-                <a>
+                <!-- <a>
                     <span class="icon"><i class="fa fa-search"></i></span>
                     <form id="tfnewsearch" method="get">
                     <input type="search" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" placeholder="Search..." /><input type="submit" value=">" class="tfbutton2">
+
                     </form>
                     </a>
-                <a class=button data-icon="plus" href="#new">New Question</a> 
+                <a class=button data-icon="plus" href="#new">New Question</a>  -->
+            </div>
+             <div class="ui-field-contain">
+
+                <div class="ui-block-a" style="width: 90%;">
+                    <input type="search" name="search" id="search" data-mini="true"     
+                    placeholder="Search for content..." />
+                </div>
+                <div class="ui-block-b" style="width: 10%;">
+                    <a href="index.html" data-role="button" data-icon="plus" data-iconpos="notext">Submit</a>
+                </div>
+
             </div>
 
             <div role="content" class="ui-content">
@@ -170,7 +182,7 @@ window.onload = function(){
             </div>
 
 
-            <div data-role="footer">
+            <div data-role="footer" data-id="foo1" data-position="fixed">
                 <div id="navigation">
                 
                     <div data-role="navbar">
