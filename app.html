@@ -2,12 +2,11 @@
 <html>
     <head>
         <title>Wellesleypedia</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-             <link rel="stylesheet" href="themes/d.min.css" />
-            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
-            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.css">
-            <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-            <script src="http://code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+       <link rel="stylesheet" href="themes/wellesleypedia.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 
             <!-- JAVASCRIPT to clear search text when the field is clicked -->
 <script type="text/javascript">
@@ -81,7 +80,7 @@ window.onload = function(){
     <body>
 
         <!-- Home page, loaded automatically, accessible via home button -->
-        <div data-role="page" id="home" data-theme="d">
+        <div data-role="page" id="home" data-theme="a">
          <div data-role="header" data-position="inline">
 
 
@@ -128,9 +127,13 @@ window.onload = function(){
                 placeholder="Search for content..." />
             </div>
 
+<<<<<<< Updated upstream
 
 
             <div role="content" class="ui-content">
+=======
+            <div role="content" class="ui-content" data-theme="a">
+>>>>>>> Stashed changes
             <h2>Home</h2>
 
             <ul data-role="listview" data-theme="c">
@@ -181,7 +184,7 @@ window.onload = function(){
         </div>
 
         <!-- Account page, accessible via navbar -->
-        <div data-role="page" id="account" data-theme="d">
+        <div data-role="page" id="account" data-theme="a">
 
              <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
@@ -194,7 +197,7 @@ window.onload = function(){
             </div>
 
 
-            <div data-role="content" class="ui-content">
+            <div data-role="content" class="ui-content" data-theme="a">
                 <h2>Account</h2>
                 <img class=avatar src="avatar.png" style="width:30%; display: flex; margin:auto;">
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
@@ -225,13 +228,19 @@ window.onload = function(){
         </div>
 
          <!-- Account page, accessible via navbar -->
+<<<<<<< Updated upstream
         <div data-role="page" id="settings" data-theme="d">
 <!-- 
+=======
+        <div data-role="page" id="settings" data-theme="a">
+
+>>>>>>> Stashed changes
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
                    <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
                 <a class=button data-icon="check" href="#save">Save</a>
             </div>
+<<<<<<< Updated upstream
 
  -->
              <div data-role="header" data-position="inline">
@@ -245,6 +254,9 @@ window.onload = function(){
             </div>
 
             <div data-role="content" class="ui-content">
+=======
+            <div data-role="content" class="ui-content" data-theme="a">
+>>>>>>> Stashed changes
                 <h2>Settings</h2>
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
                 <img class=avatar src="avatar.png" style="width:15%;"">
@@ -283,7 +295,7 @@ window.onload = function(){
 
 
          <!-- Start of Archive page -->
-        <div data-role="page" id="archive" data-theme="d">
+        <div data-role="page" id="archive" data-theme="a">
 
             <div data-role="header" data-position="inline">
                 <h1>Wellesleypedia</h1>
@@ -295,7 +307,7 @@ window.onload = function(){
                 placeholder="Search for content..." />
             </div>
 
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content" data-theme="a">
                 <h2>Archive</h2>
                 <ul class="archivelist" data-role="listview" data-inset="true" data-autodividers="true">
                     <li class=topic><a class=accountlist href="#AAVE">AAVE</a></li>
@@ -338,7 +350,7 @@ window.onload = function(){
         </div>
 
             <div data-role="footer" data-id="foo1" data-position="fixed">
-        <div data-role="page" id="fooddrink" data-theme="d">
+        <div data-role="page" id="fooddrink" data-theme="a">
 
                 <div id="navigation">
 
@@ -357,7 +369,7 @@ window.onload = function(){
         </div>
 
          <!-- Hardcoded AAVE archive page -->
-        <div data-role="page" id="AAVE" data-theme="d">
+        <div data-role="page" id="AAVE" data-theme="a">
 
            <div data-role="header">
                 <h1>Wellesleypedia</h1>
@@ -373,7 +385,7 @@ window.onload = function(){
             </div>
 
 
-            <div role="content" class="ui-content">
+            <div role="content" class="ui-content" data-theme="a">
             <h2>AAVE</h2>
 
             <ul data-role="listview" data-theme="c">
@@ -424,7 +436,7 @@ window.onload = function(){
         </div>
 
         <!-- Hardcoded archive page -->
-        <div data-role="page" id="asian" data-theme="d">
+        <div data-role="page" id="asian" data-theme="a">
 
            <div data-role="header">
                 <h1>Wellesleypedia</h1>
@@ -440,7 +452,7 @@ window.onload = function(){
             </div>
 
 
-            <div role="content" class="ui-content">
+            <div role="content" class="ui-content" data-theme="a">
             <h2>Asian American</h2>
 
             <ul data-role="listview" data-theme="c">
@@ -480,7 +492,7 @@ window.onload = function(){
 
         <!-- search page -->
 
-        <div data-role="page" id="search" data-theme="d">
+        <div data-role="page" id="search" data-theme="a">
 
             <div data-role="header">
                 <h1>Wellesleypedia</h1>
@@ -494,7 +506,7 @@ window.onload = function(){
                 <a class=button data-icon="plus" href="#new">New Question</a>
             </div>
 
-            <div role="main" class="ui-content">
+            <div role="main" class="ui-content" data-theme="a">
                 <h2>Results</h2>
 
             </div><!-- /content -->
