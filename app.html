@@ -160,7 +160,7 @@ window.onload = function(){
                     <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?</h3>
                     <br>
                     <p class="ui-li-desc"></p>
-                     <span class="ui-li-count">More</span>
+                     <span >More</span>
                     </a>
                     </li>
                 </ul>
@@ -182,6 +182,65 @@ window.onload = function(){
             </div>
 
         </div>
+
+        <!-- expanded user question page -->
+        <div data-role="page" id="userquestion" data-theme="a">
+
+           <div data-role="header">
+                <h1>Wellesleypedia</h1>
+                <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
+            </div>
+
+
+            <div role="content" class="ui-content" data-theme="a">
+            <h2 id="q">
+            </h2>
+
+            <p id="det">
+            </p>
+            <br></br>
+
+            <h2> Answers: </h2>
+
+            <ul data-role="listview" data-theme="c">
+
+                <!-- list items -->
+                <li id="answerfeed" style="display:none"><a>
+                    <h3 class="ui-li-heading"></h3>
+                    <p class="ui-li-desc" id=answer></p>
+                    <a class=button class="ui-li-count" data-icon="arrow-u">Upvote</a>
+                    </a>
+                    </li>
+                </ul>
+
+                 <form>
+                          
+                          <label for="textarea"><p>Submit an Answer </p></label>
+                          <textarea cols="8" rows="60" name="textarea" id="answerinput">
+                          </textarea>
+
+                        <button id="answersubmit" type="reset"> Submit </button>
+
+                        </form>
+
+
+            </div>
+
+            <div data-role="footer">
+                <div id="navigation">
+
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                    <li> <a href="#home" data-icon="home">Home</a>
+                    <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div>
+            </div>
+            </div>
+
+        </div>
+
 
         <!-- Account page, accessible via navbar -->
         <div data-role="page" id="account" data-theme="a">
@@ -575,6 +634,10 @@ window.onload = function(){
 
                   $("#insertdetails").text($("#details").val() + "...");
 
+                  $("#q").text($("#question").val());
+
+                  $("#det").text($("#details").val());
+
                   $("#user").css({"display":"block"});
 
                   $("#question").val("");
@@ -621,6 +684,10 @@ window.onload = function(){
 
                   $("#insertdetails").text($("#details1").val() + "...");
 
+                  $("#q").text($("#question").val());
+
+                  $("#det").text($("#details").val());
+
                   $("#user").css({"display":"block"});
 
                   $("#question1").val("");
@@ -645,6 +712,23 @@ window.onload = function(){
                   $("#question2").val("");
                   $("#details2").val("");
                   });
+
+                  $('#answersubmit').click(function(e) {
+                  e.preventDefault();
+                  console.log($('#answerinput').val());
+                  alert('Answer submitted!');
+
+
+
+                  location.href = "#userquestion";
+
+                  $("#answer").text($("#answerinput").val());          
+
+
+                  $("#answerfeed").css({"display":"block"});
+
+                  $("#answerinput").val("");
+              });
 
         </script>
     </body>
