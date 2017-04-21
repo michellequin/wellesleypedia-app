@@ -90,10 +90,10 @@ window.onload = function(){
                 <h1>Wellesleypedia</h1>
                 <a href="#popupBasic" data-role="button" data-icon="plus" data-iconpos="notext" class="ui-btn-right" data-rel= "popup">Submit</a>
             </div><!-- /header -->
-            
 
 
-            
+
+
             <div data-role="popup" id="popupBasic" data-overlay-theme="a" data-theme="d" data-corners="false">
                         <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
 
@@ -110,7 +110,7 @@ window.onload = function(){
                         <button id="submit" type="reset"> Submit </button>
 
                         </form>
-                        
+
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -214,7 +214,7 @@ window.onload = function(){
                 </ul>
 
                  <form>
-                          
+
                           <label for="textarea"><p>Submit an Answer </p></label>
                           <textarea cols="8" rows="60" name="textarea" id="answerinput">
                           </textarea>
@@ -266,7 +266,7 @@ window.onload = function(){
                         <button id="submit1" type="reset"> Submit </button>
 
                         </form>
-                        
+
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -321,7 +321,7 @@ window.onload = function(){
             <div data-role="content" class="ui-content" data-theme="a">
                 <h2>Settings</h2>
                 <ul class=accountlist data-role="listview" style="padding-bottom: 25px;" data-inset="true">
-                <img class=avatar src="avatar.png" style="width:15%;"">
+                <img class=avatar src="avatar.png" style="width:15%;">
             <li><a class=accountlist>Username: wwellesley</a></li>
             <li><a class=accountlist>Class Year: 2019</a></li>
             <li><a class=accountlist>Race: N/A</a></li>
@@ -387,7 +387,7 @@ window.onload = function(){
                     <p>Your question has been submitted and will now appear under the newsfeed as well as "My Questions" in your account.</p>
                 </div> -->
                         <br>
-                        
+
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -617,6 +617,7 @@ window.onload = function(){
             </div>
 
         </div>
+<<<<<<< Updated upstream
         <script type="text/javascript">
 
         var $ = window.jQuery;
@@ -630,7 +631,7 @@ window.onload = function(){
 
                   location.href = "#home";
 
-                  $("#insertquestion").text($("#question").val());          
+                  $("#insertquestion").text($("#question").val());
 
                   $("#insertdetails").text($("#details").val() + "...");
 
@@ -643,7 +644,7 @@ window.onload = function(){
                   $("#question").val("");
                   $("#details").val("");
 
-                  
+
 
                   // var $li = $('<li></li>', {});
 
@@ -680,7 +681,7 @@ window.onload = function(){
 
                   location.href = "#home";
 
-                  $("#insertquestion").text($("#question1").val());          
+                  $("#insertquestion").text($("#question1").val());
 
                   $("#insertdetails").text($("#details1").val() + "...");
 
@@ -703,7 +704,7 @@ window.onload = function(){
 
                   location.href = "#home";
 
-                  $("#insertquestion").text($("#question2").val());          
+                  $("#insertquestion").text($("#question2").val());
 
                   $("#insertdetails").text($("#details2").val() + "...");
 
@@ -722,7 +723,7 @@ window.onload = function(){
 
                   location.href = "#userquestion";
 
-                  $("#answer").text($("#answerinput").val());          
+                  $("#answer").text($("#answerinput").val());
 
 
                   $("#answerfeed").css({"display":"block"});
@@ -731,5 +732,292 @@ window.onload = function(){
               });
 
         </script>
+=======
+
+        <!-- question 1 page -->
+        <div data-role="page" id="question1" data-theme="a">
+
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
+                <a class=button data-icon="pencil" href="#answer">Answer</a>
+            </div>
+
+
+            <div data-role="content" class="ui-content" data-theme="a">
+                <ul style = "list-style:none; position:relative;left:-5%;">
+                    <!-- list items -->
+                    <li>
+                        <h3 class="ui-li-heading">Why can't non black-folx use AAVE?<br></br></h3>
+                        <p class="ui-li-desc">If you grew up in an area with a lot of black/brown people,
+                           and you picked up the vernacular, does that make it OK?</p>
+                        </li>
+
+                    <div> <h2>Answers </h2> </div>
+
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc">
+                          I think it really depends, but in most cases, you have to understand
+                           that that language has been comodified. It's best if we understand
+                           the power dynamics and then reask ourselves why
+                           we are trying to justify this appropriation.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a> </p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> I feel that it is OK as long as you
+                          acknowledge that you are not black. Also, you have to remember that
+                          the appropriation of black culture is trendy and a non-black person has
+                          privileges in using this vernacular without the racial discrimination.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> As a non-black person, I don't think I can understand
+                          the black experience and thus shouldn't take the culture.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                    </ul>
+            </div> <!-- the list -->
+
+            <div data-role="footer">
+                <div id="navigation">
+
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                              <li> <a href="#home" data-icon="home">Home</a>
+                                <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div> <!-- navbar -->
+
+                </div> <!-- id nav -->
+            </div> <!-- footer -->
+        </div> <!-- the entire page -->
+
+        <!-- question 2 page -->
+        <div data-role="page" id="question2" data-theme="a">
+
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
+                <a class=button data-icon="pencil" href="#answer">Answer</a>
+            </div>
+
+
+            <div data-role="content" class="ui-content" data-theme="a">
+                <ul style = "list-style:none; position:relative;left:-5%;">
+                    <!-- list items -->
+                    <li>
+                        <h3 class="ui-li-heading">What counts as AAVE?<br></br></h3>
+                        <p class="ui-li-desc">Sometimes I can't tell what is AAVE or just slang.</p>
+                        </li>
+
+                    <div> <h2>Answers </h2> </div>
+
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc">
+                          I'm not sure if there's a consolidated list, but I think we need to listen
+                          to black people and their concerns when they call us out on our appropriation
+                          of their language.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a> </p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> Some words that come to mind are "lit",
+                          "gucci","beating your face", "keepin it one hunna", etc. I don't think
+                          there's an official list, but there's work being done to document
+                          this kind of vernacular on the internet.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> Dropping of the r's is common for AAVE speech.
+                          I think before you say something that might be AAVE, think about where you heard
+                          it, whether that be a rap song, or from a black person. If that's the case,
+                          maybe reevaluate why you're saying it?
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                    </ul>
+            </div> <!-- the list -->
+
+            <div data-role="footer">
+                <div id="navigation">
+
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                              <li> <a href="#home" data-icon="home">Home</a>
+                                <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div> <!-- navbar -->
+
+                </div> <!-- id nav -->
+            </div> <!-- footer -->
+        </div> <!-- the entire page -->
+
+        <!-- question 3 page -->
+        <div data-role="page" id="question3" data-theme="a">
+
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
+                <a class=button data-icon="pencil" href="#answer">Answer</a>
+            </div>
+
+
+            <div data-role="content" class="ui-content" data-theme="a">
+                <ul style = "list-style:none; position:relative;left:-5%;">
+                    <!-- list items -->
+                    <li>
+                        <h3 class="ui-li-heading">Is there a relationship between AAVE
+                          usage and cultural appropriation?<br></br></h3>
+                        <p class="ui-li-desc">Just curious.</p>
+                        </li>
+
+                    <div> <h2>Answers </h2> </div>
+
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc">
+                          There's actually a direct relation; AAVE usage by non-black people is a form of appropriation.
+                          Of course, it's not as obvious as having dreads, but it still is the co-opting of a culture
+                          that is not yours.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a> </p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> Definitely agree with what has been said. AAVE used by non-black folx
+                          is cultural appropriation. If that culture and language does not belong to you,
+                          you are 100% appropriating it.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> 100% a form of appropriation! I will say it's probably
+                          going to be less noticeable? And sometimes the lines between appropriation can be murky
+                          if people come from black/brown communities even if they're not black/brown. There's another
+                          forum on that specifically
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                    </ul>
+            </div> <!-- the list -->
+
+            <div data-role="footer">
+                <div id="navigation">
+
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                              <li> <a href="#home" data-icon="home">Home</a>
+                                <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div> <!-- navbar -->
+
+                </div> <!-- id nav -->
+            </div> <!-- footer -->
+        </div> <!-- the entire page -->
+
+
+        <!-- question 4 page -->
+        <div data-role="page" id="question4" data-theme="a">
+
+            <div data-role="header" data-position="inline">
+                <h1>Wellesleypedia</h1>
+                   <a class=backbutton data-icon="back" data-rel="back" back-btn="true">Back</a>
+                <a class=button data-icon="pencil" href="#answer">Answer</a>
+            </div>
+
+
+            <div data-role="content" class="ui-content" data-theme="a">
+                <ul style = "list-style:none; position:relative;left:-5%;">
+                    <!-- list items -->
+                    <li>
+                        <h3 class="ui-li-heading">Does anyone have good sources
+                          for AAVE dictionaries?<br></br></h3>
+                        <p class="ui-li-desc">Just curious.</p>
+                        </li>
+
+                    <div> <h2>Answers </h2> </div>
+
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc">
+                          I don't think there's a real definitive list out there, but I'll contribute a few words
+                          that I consider AAVE, as a black person: lit, talkin' shit, roll up,
+                          and wildin out (wyling out).
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a> </p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> Dropping your r's in general is probably a sign of AAVE usage.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> "Beat my face" is one that I see used a lot!
+                          Also, "YAAAAS", "Slay", "Savage", and "extra".
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> It really bothers me when people use on fleek, or
+                          on point. Also, more minor words that are still AAVE are when people use
+                          cat or dog to refer to their friends.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                        <li style = "border-bottom:1px solid black;">
+                        <p class="ui-li-desc"> This is obvious, but the n word is off limits.
+                          <a style = "float:right;" href =""> <img src = "thumbsupwhite.png"
+                          height = "20"></a>
+                          <a style = "float:right;" href =""> <img src = "flag.png"
+                          height = "20"></a></p>
+                        </li>
+                    </ul>
+            </div> <!-- the list -->
+
+            <div data-role="footer">
+                <div id="navigation">
+
+                    <div data-role="navbar">
+                        <ul>
+                            <li> <a href="#account" data-icon="user">Account</a>
+                              <li> <a href="#home" data-icon="home">Home</a>
+                                <li> <a href="#archive" data-icon="grid">Archive</a>
+                        </ul>
+                    </div> <!-- navbar -->
+
+                </div> <!-- id nav -->
+            </div> <!-- footer -->
+        </div> <!-- the entire page -->
+
     </body>
 </html>
