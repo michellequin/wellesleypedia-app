@@ -101,15 +101,16 @@ window.onload = function(){
                           <h2> Ask a Question </h2>
                           <form>
                           <label for ="input"><p> Question </p></label>
-                          <input type="text"></input>
+                          <input type="text" id="question"></input>
 
                           <label for="textarea"><p>Elaborate with details </p></label>
                           <textarea cols="8" rows="60" name="textarea" id="details">
                           </textarea>
 
+                        <button id="submit" type="reset"> Submit </button>
+
                         </form>
-                        <br>
-                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -124,29 +125,40 @@ window.onload = function(){
             <div role="content" class="ui-content" data-theme="a">
             <h2>Home</h2>
 
-            <ul data-role="listview" data-theme="c">
+            <ul id="feed" data-role="listview" data-theme="c">
 
                 <!-- list items -->
+                <li id="user" style="display:none"><a href="#userquestion" >
+                    <h3 id="insertquestion" class="ui-li-heading">                   </h3>
+                    <br>
+                    <p id="insertdetails" class="ui-li-desc"></p>
+                    <span class="ui-li-count">More</span>
+                    </a>
+                    </li>
                 <li><a href="#question1" >
-                    <h3 class="ui-li-heading">What exactly constitutes colonialism?<br></br></h3>
+                    <h3 class="ui-li-heading">What exactly constitutes colonialism?</h3>
+                    <br>
                     <p class="ui-li-desc">I don't understand...</p>
                     <span class="ui-li-count">More</span>
                     </a>
                     </li>
                     <li><a href="#question2" >
-                    <h3 class="ui-li-heading">What is elitism?<br></br></h3>
+                    <h3 class="ui-li-heading">What is elitism?</h3>
+                    <br>
                     <p class="ui-li-desc">I heard about this term for the first time in...</p>
                      <span class="ui-li-count">More</span>
                     </a>
                     </li>
                     <li><a href="#question3" class="ui-link-inherit">
-                    <h3 class="ui-li-heading">Why is colorism so rampant?<br></br></h3>
+                    <h3 class="ui-li-heading">Why is colorism so rampant?</h3>
+                    <br>
                     <p class="ui-li-desc">Sometimes it frustrates me how...</p>
                      <span class="ui-li-count">More</span>
                     </a>
                     </li>
                     <li><a href="#question4" class="ui-link-inherit">
-                    <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?<br></br></h3>
+                    <h3 class="ui-li-heading">How did APIA gain a reputation for being passive?</h3>
+                    <br>
                     <p class="ui-li-desc"></p>
                      <span class="ui-li-count">More</span>
                     </a>
@@ -186,15 +198,16 @@ window.onload = function(){
                           <h2> Ask a Question </h2>
                           <form>
                           <label for ="input"><p> Question </p></label>
-                          <input type="text"></input>
+                          <input type="text" id="question1"></input>
 
                           <label for="textarea"><p>Elaborate with details </p></label>
-                          <textarea cols="8" rows="60" name="textarea" id="details">
+                          <textarea cols="8" rows="60" name="textarea" id="details1">
                           </textarea>
 
+                        <button id="submit1" type="reset"> Submit </button>
+
                         </form>
-                        <br>
-                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -299,15 +312,23 @@ window.onload = function(){
                           <h2> Ask a Question </h2>
                           <form>
                           <label for ="input"><p> Question </p></label>
-                          <input type="text"></input>
+                          <input type="text" id="question2"></input>
 
                           <label for="textarea"><p>Elaborate with details </p></label>
-                          <textarea cols="8" rows="60" name="textarea" id="details">
+                          <textarea cols="8" rows="60" name="textarea" id="details2">
                           </textarea>
 
+                        <button id="submit2" type="reset"> Submit </button>
+
                         </form>
+                       <!--  <div data-role="popup" id="submitted" class="ui-popup ui-body-a ui-overlay-shadow ui-corner-all" data-overlay-theme="a" data-theme="d" data-corners="false">
+                    <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+                    <h4>Submitted!</h4>
+                    <img class=popuppic src="check.svg">
+                    <p>Your question has been submitted and will now appear under the newsfeed as well as "My Questions" in your account.</p>
+                </div> -->
                         <br>
-                        <a href="#anylink" style ="float:right; text-decoration: none;"> Submit </a>
+                        
                         <!--<input type="submit" value="Submit">-->
               </div>
             </div>
@@ -537,5 +558,94 @@ window.onload = function(){
             </div>
 
         </div>
+        <script type="text/javascript">
+
+        var $ = window.jQuery;
+
+                $('#submit').click(function(e) {
+                  e.preventDefault();
+                  console.log($('#question').val());
+                  alert('Question submitted!');
+
+
+
+                  location.href = "#home";
+
+                  $("#insertquestion").text($("#question").val());          
+
+                  $("#insertdetails").text($("#details").val() + "...");
+
+                  $("#user").css({"display":"block"});
+
+                  $("#question").val("");
+                  $("#details").val("");
+
+                  
+
+                  // var $li = $('<li></li>', {});
+
+                  // var $a = $('<a></a>', {});
+
+                  // var $h = $('<h3></h3>', {
+                  //   "class":"ui-li-heading",
+                  //   "text": $('#question').val(),
+                  // });
+
+                  // var $p = $('<p></p>', {
+                  //    "class":"ui-li-desc",
+                  //    "text": $('#details').val(),
+
+                  // });
+
+                  // var $span = $('<span class="ui-li-count">' + "More" + '</span>', {
+
+                  // });
+
+                  //$a.append($h);
+                  //$a.append($p);
+                  //$a.append($span);
+                  //$li.append($a);
+                  //$("#feed").append($li);
+                });
+
+                $('#submit1').click(function(e) {
+                  e.preventDefault();
+                  console.log($('#question').val());
+                  alert('Question submitted!');
+
+
+
+                  location.href = "#home";
+
+                  $("#insertquestion").text($("#question1").val());          
+
+                  $("#insertdetails").text($("#details1").val() + "...");
+
+                  $("#user").css({"display":"block"});
+
+                  $("#question1").val("");
+                  $("#details1").val("");
+                  });
+
+                $('#submit2').click(function(e) {
+                  e.preventDefault();
+                  console.log($('#question').val());
+                  alert('Question submitted!');
+
+
+
+                  location.href = "#home";
+
+                  $("#insertquestion").text($("#question2").val());          
+
+                  $("#insertdetails").text($("#details2").val() + "...");
+
+                  $("#user").css({"display":"block"});
+
+                  $("#question2").val("");
+                  $("#details2").val("");
+                  });
+
+        </script>
     </body>
 </html>
